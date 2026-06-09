@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cleo AI — Tu Asistente Empresarial Inteligente</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- ── LOADER ─────────────────────────────────────────────────────────── -->
+  <div id="loader">
+    <div class="loader-inner">
+      <img src="https://raw.githubusercontent.com/Fedes10/Archivos-Html/refs/heads/main/Im%C3%A1genes/cleo-logo-no-bg.png" alt="Cleo AI" class="loader-logo">
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
+  </div>
+
+  <!-- ── NAV ───────────────────────────────────────────────────────────── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-brand">
+        <img src="https://raw.githubusercontent.com/Fedes10/Archivos-Html/refs/heads/main/Im%C3%A1genes/cleo-logo-no-bg.png" alt="Cleo AI" class="nav-logo">
+        <span class="nav-name">Cleo <span class="nav-ai">AI</span></span>
+      </div>
+      <div class="nav-links">
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#capacidades">Capacidades</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#contacto" class="nav-cta">Empezar ahora</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HERO ──────────────────────────────────────────────────────────── -->
+  <section id="hero">
+    <canvas id="particles"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">Asistente Empresarial · WhatsApp · ERP</div>
+      <h1 class="hero-title reveal-up">
+        Tu empresa, siempre<br>
+        <span class="gradient-text">disponible y conectada</span>
+      </h1>
+      <p class="hero-subtitle reveal-up">
+        Cleo AI gestiona facturas, pedidos y catálogo directamente desde WhatsApp,<br>
+        conectado en tiempo real a tu sistema ERP.
+      </p>
+      <div class="hero-actions reveal-up">
+        <a href="#como-funciona" class="btn-primary">Ver cómo funciona</a>
+        <a href="#capacidades" class="btn-ghost">Conoce las capacidades</a>
+      </div>
+      <div class="hero-float-cards">
+        <div class="float-card fc1 reveal-up">
+          <div class="fc-icon">📄</div>
+          <div class="fc-text">Factura <strong>F2026-0357</strong><br><small>enviada por email</small></div>
+        </div>
+        <div class="float-card fc2 reveal-up">
+          <div class="fc-icon">🛒</div>
+          <div class="fc-text">Pedido <strong>confirmado</strong><br><small>en segundos</small></div>
+        </div>
+        <div class="float-card fc3 reveal-up">
+          <div class="fc-icon">📦</div>
+          <div class="fc-text">Stock <strong>disponible</strong><br><small>respuesta inmediata</small></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-phone-wrap reveal-right">
+      <div class="phone-frame">
+        <div class="phone-screen">
+          <div class="chat-header">
+            <div class="chat-avatar">
+              <img src="https://raw.githubusercontent.com/Fedes10/Archivos-Html/refs/heads/main/Im%C3%A1genes/cleo-logo-no-bg.png" alt="Cleo">
+            </div>
+            <div>
+              <div class="chat-name">Cleo AI</div>
+              <div class="chat-status">● en línea</div>
+            </div>
+          </div>
+          <div class="chat-body" id="chatDemo">
+            <div class="msg msg-in" style="animation-delay:0.5s">Hola, quiero saber el estado de mis facturas pendientes</div>
+            <div class="msg msg-out typing-dots" style="animation-delay:1.2s"><span></span><span></span><span></span></div>
+            <div class="msg msg-out" style="animation-delay:2.2s">Hola Ana. Tienes <strong>2 facturas</strong> pendientes:<br><br>• <strong>F2026-0351</strong> — 1.240 € (vence 15 jun)<br>• <strong>F2026-0344</strong> — 890 € (vence 22 jun)<br><br>¿Te las envío por email?</div>
+            <div class="msg msg-in" style="animation-delay:3.4s">Sí, por favor</div>
+            <div class="msg msg-out" style="animation-delay:4.2s">Enviadas a tu email registrado</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STATS ─────────────────────────────────────────────────────────── -->
+  <section id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card reveal-up">
+          <div class="stat-number" data-target="24">0</div>
+          <div class="stat-unit">/7</div>
+          <div class="stat-label">Disponible todo el día, todos los días</div>
+        </div>
+        <div class="stat-card reveal-up" style="animation-delay:0.1s">
+          <div class="stat-number" data-target="3">0</div>
+          <div class="stat-unit">seg</div>
+          <div class="stat-label">Tiempo medio de respuesta a clientes</div>
+        </div>
+        <div class="stat-card reveal-up" style="animation-delay:0.2s">
+          <div class="stat-number" data-target="100">0</div>
+          <div class="stat-unit">%</div>
+          <div class="stat-label">Datos reales del ERP, siempre actualizados</div>
+        </div>
+        <div class="stat-card reveal-up" style="animation-delay:0.3s">
+          <div class="stat-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" stroke="#2563eb" stroke-width="2.5" fill="none"/><path d="M12 20l6 6 10-12" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg>
+          </div>
+          <div class="stat-label-big">WhatsApp<br>nativo</div>
+          <div class="stat-sub">Sin apps adicionales ni formación</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CÓMO FUNCIONA ──────────────────────────────────────────────────── -->
+  <section id="como-funciona">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-tag">Flujo de trabajo</div>
+        <h2>Así de simple funciona Cleo</h2>
+        <p>Tu cliente escribe por WhatsApp. Cleo consulta el ERP en tiempo real y responde en segundos. Sin esperas, sin llamadas, sin formularios.</p>
+      </div>
+
+      <div class="flow-diagram reveal-up">
+        <!-- Paso 1 -->
+        <div class="flow-step" data-step="1">
+          <div class="flow-icon-wrap">
+            <div class="flow-icon fi-blue">
+              <svg width="32" height="32" viewBox="0 0 32 32"><rect x="4" y="2" width="24" height="28" rx="4" stroke="white" stroke-width="2" fill="none"/><path d="M9 8h14M9 13h14M9 18h8" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <div class="flow-step-num">1</div>
+          </div>
+          <h3>Cliente escribe</h3>
+          <p>Tu cliente hace su consulta por WhatsApp igual que hablaría con una persona</p>
+        </div>
+
+        <div class="flow-arrow">
+          <svg width="60" height="20" viewBox="0 0 60 20">
+            <line x1="0" y1="10" x2="50" y2="10" stroke="#2563eb" stroke-width="2" stroke-dasharray="5,3"/>
+            <polygon points="50,5 60,10 50,15" fill="#2563eb"/>
+            <circle class="flow-dot" cx="0" cy="10" r="4" fill="#60a5fa"/>
+          </svg>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="flow-step" data-step="2">
+          <div class="flow-icon-wrap">
+            <div class="flow-icon fi-indigo">
+              <img src="https://raw.githubusercontent.com/Fedes10/Archivos-Html/refs/heads/main/Im%C3%A1genes/cleo-logo-no-bg.png" alt="Cleo" style="width:32px;height:32px;object-fit:contain;filter:brightness(10)">
+            </div>
+            <div class="flow-step-num">2</div>
+          </div>
+          <h3>Cleo procesa</h3>
+          <p>Cleo entiende la petición y consulta tu ERP en tiempo real con datos exactos y actualizados</p>
+        </div>
+
+        <div class="flow-arrow">
+          <svg width="60" height="20" viewBox="0 0 60 20">
+            <line x1="0" y1="10" x2="50" y2="10" stroke="#2563eb" stroke-width="2" stroke-dasharray="5,3"/>
+            <polygon points="50,5 60,10 50,15" fill="#2563eb"/>
+            <circle class="flow-dot" cx="0" cy="10" r="4" fill="#60a5fa"/>
+          </svg>
+        </div>
+
+        <!-- Paso 3 -->
+        <div class="flow-step" data-step="3">
+          <div class="flow-icon-wrap">
+            <div class="flow-icon fi-green">
+              <svg width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" stroke="white" stroke-width="2" fill="none"/><path d="M10 16l4 4 8-8" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg>
+            </div>
+            <div class="flow-step-num">3</div>
+          </div>
+          <h3>Respuesta instantánea</h3>
+          <p>Tu cliente recibe la información exacta que necesita, sin esperas y en segundos</p>
+        </div>
+      </div>
+
+      <div class="flow-examples reveal-up">
+        <div class="example-card">
+          <div class="ex-label">Ejemplo</div>
+          <div class="ex-msg ex-in">"Mándame mis facturas pendientes"</div>
+          <div class="ex-arrow">↓</div>
+          <div class="ex-msg ex-out">Tienes <strong>2 facturas</strong> pendientes por 2.130 €. ¿Las envío a tu email?</div>
+        </div>
+        <div class="example-card">
+          <div class="ex-label">Ejemplo</div>
+          <div class="ex-msg ex-in">"¿Hay stock del artículo XR-200?"</div>
+          <div class="ex-arrow">↓</div>
+          <div class="ex-msg ex-out">Sí, hay stock disponible del <strong>XR-200</strong>. ¿Quieres que prepare un pedido?</div>
+        </div>
+        <div class="example-card">
+          <div class="ex-label">Ejemplo</div>
+          <div class="ex-msg ex-in">"Quiero hacer un pedido de 10 unidades del producto A"</div>
+          <div class="ex-arrow">↓</div>
+          <div class="ex-msg ex-out">Pedido <strong>confirmado</strong> por 10 uds del Producto A. Te aviso cuando esté procesado</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CAPACIDADES ────────────────────────────────────────────────────── -->
+  <section id="capacidades">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-tag">Qué puede hacer Cleo</div>
+        <h2>Todo lo que necesita tu cliente, disponible 24/7</h2>
+        <p>Tres áreas de gestión conectadas directamente a tu ERP, accesibles por WhatsApp en cualquier momento.</p>
+      </div>
+
+      <div class="cap-grid">
+        <!-- Facturas -->
+        <div class="cap-card reveal-up">
+          <div class="cap-icon-wrap">
+            <div class="cap-icon">
+              <svg width="36" height="36" viewBox="0 0 36 36"><rect x="5" y="3" width="26" height="30" rx="4" stroke="#2563eb" stroke-width="2" fill="none"/><path d="M11 10h14M11 15h14M11 20h9" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/><path d="M23 25l2.5 2.5L30 23" stroke="#2563eb" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+            </div>
+          </div>
+          <div class="cap-glow glow-blue"></div>
+          <h3>Facturas</h3>
+          <p>Consulta el estado de cualquier factura, descárgala en PDF directamente en el chat o recíbela en tu email con un solo mensaje.</p>
+          <ul class="cap-list">
+            <li>Consultar estado de facturas</li>
+            <li>Recibir facturas por email</li>
+            <li>Ver facturas en el chat (PDF)</li>
+          </ul>
+          <div class="cap-tag">Tiempo real · ERP conectado</div>
+        </div>
+
+        <!-- Pedidos -->
+        <div class="cap-card cap-featured reveal-up" style="animation-delay:0.15s">
+          <div class="cap-badge">Más usado</div>
+          <div class="cap-icon-wrap">
+            <div class="cap-icon cap-icon-white">
+              <svg width="36" height="36" viewBox="0 0 36 36"><path d="M5 8h4l3 14h14l3-10H10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="16" cy="27" r="2" stroke="white" stroke-width="2" fill="none"/><circle cx="24" cy="27" r="2" stroke="white" stroke-width="2" fill="none"/></svg>
+            </div>
+          </div>
+          <h3>Pedidos</h3>
+          <p>Revisa el historial completo de compras o realiza un nuevo pedido directamente desde WhatsApp, sin llamadas ni formularios.</p>
+          <ul class="cap-list cap-list-white">
+            <li>Historial de compras</li>
+            <li>Realizar nuevos pedidos</li>
+            <li>Confirmación inmediata</li>
+          </ul>
+          <div class="cap-tag cap-tag-white">Pedido confirmado en segundos</div>
+        </div>
+
+        <!-- Catálogo -->
+        <div class="cap-card reveal-up" style="animation-delay:0.3s">
+          <div class="cap-icon-wrap">
+            <div class="cap-icon">
+              <svg width="36" height="36" viewBox="0 0 36 36"><rect x="3" y="3" width="13" height="13" rx="3" stroke="#2563eb" stroke-width="2" fill="none"/><rect x="20" y="3" width="13" height="13" rx="3" stroke="#2563eb" stroke-width="2" fill="none"/><rect x="3" y="20" width="13" height="13" rx="3" stroke="#2563eb" stroke-width="2" fill="none"/><rect x="20" y="20" width="13" height="13" rx="3" stroke="#2563eb" stroke-width="2" fill="none"/></svg>
+            </div>
+          </div>
+          <div class="cap-glow glow-blue"></div>
+          <h3>Catálogo</h3>
+          <p>Busca cualquier producto por nombre, descripción o categoría y consulta la disponibilidad de stock al instante.</p>
+          <ul class="cap-list">
+            <li>Buscar productos</li>
+            <li>Disponibilidad de stock</li>
+            <li>Información del producto</li>
+          </ul>
+          <div class="cap-tag">Búsqueda inteligente</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EXPERIENCIA CLIENTE ────────────────────────────────────────────── -->
+  <section id="experiencia">
+    <div class="container">
+      <div class="exp-grid">
+        <div class="exp-text reveal-left">
+          <div class="section-tag">Experiencia real</div>
+          <h2>Como hablar con una persona,<br>con la precisión de un sistema</h2>
+          <p>Cleo entiende el lenguaje natural. Tu cliente no necesita aprender comandos ni formatos especiales. Escribe como hablaría, y Cleo entiende y responde.</p>
+          <div class="exp-features">
+            <div class="exp-feat">
+              <div class="feat-dot"></div>
+              <div>
+                <strong>Sin aplicaciones adicionales</strong>
+                <p>Tu cliente usa WhatsApp, que ya tiene instalado</p>
+              </div>
+            </div>
+            <div class="exp-feat">
+              <div class="feat-dot"></div>
+              <div>
+                <strong>Sus datos, solo sus datos</strong>
+                <p>Cada cliente ve únicamente su información</p>
+              </div>
+            </div>
+            <div class="exp-feat">
+              <div class="feat-dot"></div>
+              <div>
+                <strong>ERP siempre actualizado</strong>
+                <p>Los datos que muestra Cleo son los del ERP en tiempo real</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="exp-phone reveal-right">
+          <div class="phone-frame phone-frame-sm">
+            <div class="phone-screen">
+              <div class="chat-header">
+                <div class="chat-avatar">
+                  <img src="https://raw.githubusercontent.com/Fedes10/Archivos-Html/refs/heads/main/Im%C3%A1genes/cleo-logo-no-bg.png" alt="Cleo">
+                </div>
+                <div>
+                  <div class="chat-name">Cleo AI</div>
+                  <div class="chat-status">● en línea</div>
+                </div>
+              </div>
+              <div class="chat-body">
+                <div class="msg msg-in anim-in">¿Hay stock del producto Cava Brut 75cl?</div>
+                <div class="msg msg-out typing-dots anim-in" style="animation-delay:0.8s"><span></span><span></span><span></span></div>
+                <div class="msg msg-out anim-in" style="animation-delay:1.8s">Sí, hay stock disponible del <strong>Cava Brut 75cl</strong><br><br>¿Quieres que prepare un pedido?</div>
+                <div class="msg msg-in anim-in" style="animation-delay:3s">Sí, quiero 50 cajas</div>
+                <div class="msg msg-out anim-in" style="animation-delay:3.8s">Pedido registrado:<br><strong>50 uds Cava Brut 75cl</strong><br><br>Recibirás confirmación en breve</div>
+              </div>
+            </div>
+          </div>
+          <div class="exp-orb orb1"></div>
+          <div class="exp-orb orb2"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── POR QUÉ CLEO ───────────────────────────────────────────────────── -->
+  <section id="por-que">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-tag">Por qué Cleo</div>
+        <h2>Tu equipo se ocupa de lo importante.<br>Cleo, del resto.</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal-up">
+          <div class="why-icon">🕐</div>
+          <h4>Sin esperas</h4>
+          <p>Tus clientes obtienen respuestas al instante, sin esperar a que alguien atienda el teléfono o el email.</p>
+        </div>
+        <div class="why-card reveal-up" style="animation-delay:0.1s">
+          <div class="why-icon">🔒</div>
+          <h4>Datos seguros</h4>
+          <p>Cada cliente solo accede a su información. Sin riesgo de exposición de datos entre clientes.</p>
+        </div>
+        <div class="why-card reveal-up" style="animation-delay:0.2s">
+          <div class="why-icon">🔗</div>
+          <h4>ERP conectado</h4>
+          <p>Los datos de Cleo vienen directamente de tu sistema ERP. Sin discrepancias, sin errores manuales.</p>
+        </div>
+        <div class="why-card reveal-up" style="animation-delay:0.3s">
+          <div class="why-icon">📱</div>
+          <h4>Canal que ya usan</h4>
+          <p>WhatsApp está en el móvil de tus clientes. Cero fricción, cero formación, cero barreras.</p>
+        </div>
+        <div class="why-card reveal-up" style="animation-delay:0.4s">
+          <div class="why-icon">⚡</div>
+          <h4>Siempre disponible</h4>
+          <p>24 horas, 7 días a la semana. Domingos, festivos, fuera de horario. Cleo nunca descansa.</p>
+        </div>
+        <div class="why-card reveal-up" style="animation-delay:0.5s">
+          <div class="why-icon">📈</div>
+          <h4>Sin límite de clientes</h4>
+          <p>Cleo atiende a todos tus clientes a la vez, sin colas, sin tiempos de espera añadidos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA / CONTACTO ─────────────────────────────────────────────────── -->
+  <section id="contacto">
+    <div class="container">
+      <div class="cta-box reveal-up">
+        <div class="cta-glow"></div>
+        <img src="https://raw.githubusercontent.com/Fedes10/Archivos-Html/refs/heads/main/Im%C3%A1genes/cleo-logo-no-bg.png" alt="Cleo AI" class="cta-logo">
+        <h2>¿Listo para que Cleo trabaje<br>en tu empresa?</h2>
+        <p>Cleo AI ya está conectando empresas con sus clientes a través de WhatsApp.<br>Tu negocio puede ser el siguiente.</p>
+        <div class="cta-actions">
+          <a href="mailto:info@cleverbyte.es" class="btn-primary btn-lg">Quiero Cleo para mi empresa</a>
+          <a href="https://cleverbyte.es" class="btn-ghost btn-lg" target="_blank">Conoce CleverByte</a>
+        </div>
+        <div class="cta-trust">
+          <span>Desarrollado por</span>
+          <strong>CleverByte</strong>
+          <span>·</span>
+          <span>Integración ERP personalizada</span>
+          <span>·</span>
+          <span>Soporte continuo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────────────────── -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="https://raw.githubusercontent.com/Fedes10/Archivos-Html/refs/heads/main/Im%C3%A1genes/cleo-logo-no-bg.png" alt="Cleo AI" class="footer-logo">
+        <span>Cleo AI</span>
+      </div>
+      <div class="footer-copy">© 2026 CleverByte · Todos los derechos reservados</div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
