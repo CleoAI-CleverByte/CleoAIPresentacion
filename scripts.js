@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
   setTimeout(() => {
     const loader = document.getElementById('loader');
     if (loader) loader.classList.add('hidden');
-  }, 1800);
+  }, 700);
 });
 
 /* ── PARTICLES CANVAS ────────────────────────────────────────── */
@@ -18,10 +18,11 @@ window.addEventListener('load', () => {
   let W, H, particles = [], mouse = { x: -999, y: -999 };
 
   function resize() {
-    W = canvas.width  = canvas.offsetWidth;
-    H = canvas.height = canvas.offsetHeight;
+    const hero = document.getElementById('hero');
+    W = canvas.width  = hero ? hero.offsetWidth  : window.innerWidth;
+    H = canvas.height = hero ? hero.offsetHeight : window.innerHeight;
   }
-  resize();
+  requestAnimationFrame(resize);
   window.addEventListener('resize', resize);
 
   function Particle() {
